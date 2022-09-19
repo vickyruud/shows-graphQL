@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
+import Countries from "../components/Countries";
 
 const Home: NextPage = () => {
   return (
     <div>
-      <button className="btn">Hello</button>
+      <Countries />
     </div>
   );
 };

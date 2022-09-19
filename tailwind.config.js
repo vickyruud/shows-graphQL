@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    gridTemplateColumns: {
+      "fill-auto": "repeat(auto-fill, minmax(200px, 1fr))",
+    },
   },
   plugins: [require("daisyui")],
 };
