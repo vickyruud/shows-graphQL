@@ -29,7 +29,7 @@ const Countries = () => {
   }
 
   return (
-    <div className="grid grid-cols-fill-auto gap-20 px-5">
+    <div className="grid grid-cols-4 gap-4 px-5">
       {data.countries.map((country: any, i: any) => (
         <CountryItem key={i} country={country} />
       ))}

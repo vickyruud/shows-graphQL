@@ -30,16 +30,15 @@ const VisitedCounties = () => {
   }
 
   return (
-    <div>
+    <div className="grid grid-cols-10">
       {countriesToVisit.map((countryCode) => {
         const country = data.countries.find(
           (country: any) => country.code === countryCode
         );
         return (
-          <div key={country.code} className="avatar">
-            <div className=" text-5xl text-center justify-center p-2 ">
-              {country.emoji}
-            </div>{" "}
+          <div key={country.code}>
+            <div className=" text-5xl  p-2 ">{country.emoji}</div>
+            <h2>{country.name}</h2>
           </div>
         );
       })}
