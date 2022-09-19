@@ -21,7 +21,7 @@ const CountryItem = ({ country }: { country: any }) => {
       </figure>
       <div className="card-body">
         <h2 className="card-title">{country.name}</h2>
-        <p> Capital: {country.capital}</p>
+        <p> {country.capital ? `Capital: ${country.capital}` : null}</p>
         <div className="card-actions justify-end">
           <button
             onClick={handleOnClick}

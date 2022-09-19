@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Countries from "../components/Countries";
+import LazyCountries from "../components/LazyCountries";
 import VisitedCounties from "../components/VisitedCounties";
 
 const Home: NextPage = () => {
@@ -9,7 +10,8 @@ const Home: NextPage = () => {
         <h2 style={{ fontFamily: "Helvetica" }}>Countries to Visit</h2>
         <VisitedCounties />
       </div>
-      <Countries />
+      {/* <Countries /> */}
+      <LazyCountries />
     </div>
   );
 };
