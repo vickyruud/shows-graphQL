@@ -11,6 +11,8 @@ const GET_COUNTRIES = gql`
       languages {
         name
       }
+      code
+      visit @client
     }
   }
 `;
@@ -27,7 +29,7 @@ const Countries = () => {
   }
 
   return (
-    <div className="grid grid-cols-fill-auto gap-[20px]">
+    <div className="grid grid-cols-fill-auto gap-20 px-5">
       {data.countries.map((country: any, i: any) => (
         <CountryItem key={i} country={country} />
       ))}

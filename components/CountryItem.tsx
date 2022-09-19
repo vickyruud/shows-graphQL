@@ -1,11 +1,37 @@
 import React from "react";
+import { visitCountriesVar } from "../client/client";
 
 const CountryItem = ({ country }: { country: any }) => {
+  const handleOnClick = () => {
+    console.log(country.visit);
+    const visitCountries: any = visitCountriesVar();
+    visitCountriesVar(
+      country.visit
+        ? visitCountries.filter(
+            (countryCode: any) => countryCode !== country.code
+          )
+        : [...visitCountries, country.code]
+    );
+  };
+
   return (
-    <div className="flex flex-col border-4 h-48 border-teal-600 p-10 items-center text-center mt-5 mx-5 justify-center">
-      <div className="text-5xl">{country.emoji}</div>
-      <h2>{country.name}</h2>
-      <button className="btn btn-primary w-fit">Visited</button>
+    <div className="card lg:card-side bg-base-100 shadow-xl">
+      <figure>
+        <div className="text-5xl pl-2"> {country.emoji} </div>
+      </figure>
+      <div className="card-body">
+        <h2 className="card-title">{country.name}</h2>
+        <p> Capital: {country.capital}</p>
+        <div className="card-actions justify-end">
+          <button
+            onClick={handleOnClick}
+            className="btn bg-teal-600 px-2 text-center"
+          >
+            {country.visit ? "Remove From " : "Add To "}
+            itinerary
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
