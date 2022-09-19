@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <div className="border-[#92c5dd]-700 border-4 rounded-[16px] mb-[16px] py-[24px] px-[16px]">
-        <h2 style={{ fontFamily: "Helvetica" }}>Countries to Visit</h2>
+        <h1 className="text-2xl font-semibold">Countries to Visit</h1>
         <VisitedCounties />
       </div>
       {/* <Countries /> */}

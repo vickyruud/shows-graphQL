@@ -30,19 +30,25 @@ const VisitedCounties = () => {
   }
 
   return (
-    <div className="grid grid-cols-10">
-      {countriesToVisit.map((countryCode) => {
-        const country = data.countries.find(
-          (country: any) => country.code === countryCode
-        );
-        return (
-          <div key={country.code}>
-            <div className=" text-5xl  p-2 ">{country.emoji}</div>
-            <h2>{country.name}</h2>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      {countriesToVisit.length < 1 ? (
+        "Add Counties to your list"
+      ) : (
+        <div className="grid grid-cols-10">
+          {countriesToVisit.map((countryCode) => {
+            const country = data.countries.find(
+              (country: any) => country.code === countryCode
+            );
+            return (
+              <div key={country.code}>
+                <div className=" text-5xl  p-2 ">{country.emoji}</div>
+                <h2>{country.name}</h2>
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </>
   );
 };
 

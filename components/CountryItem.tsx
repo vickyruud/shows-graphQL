@@ -19,8 +19,8 @@ const CountryItem = ({ country }: { country: any }) => {
       <figure>
         <div className="text-5xl pl-2"> {country.emoji} </div>
       </figure>
-      <div className="card-body">
-        <h2 className="card-title">{country.name}</h2>
+      <div className="card-body ">
+        <h2 className="card-title text-center">{country.name}</h2>
         <p> {country.capital ? `Capital: ${country.capital}` : null}</p>
         <div className="card-actions justify-end">
           <button
