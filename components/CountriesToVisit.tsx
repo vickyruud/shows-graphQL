@@ -16,7 +16,7 @@ export const GET_ITENARARY = gql`
   }
 `;
 
-const VisitedCounties = () => {
+const CountriesToVisit = () => {
   const countriesToVisit = useReactiveVar(visitCountriesVar);
 
   const { data, loading, error } = useQuery(GET_ITENARARY);
@@ -52,4 +52,4 @@ const VisitedCounties = () => {
   );
 };
 
-export default VisitedCounties;
+export default CountriesToVisit;

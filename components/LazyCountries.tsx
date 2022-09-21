@@ -29,7 +29,7 @@ const LazyCountries = () => {
       Click to Load Countries
     </button>
   ) : (
-    <div className="grid grid-cols-4 gap-4 px-5">
+    <div className="grid grid-cols-5 gap-4 px-5">
       {data.countries.map((country: any, i: any) => (
         <CountryItem key={i} country={country} />
       ))}
