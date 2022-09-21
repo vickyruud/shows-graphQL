@@ -22,7 +22,7 @@ const CountryItem = ({ country }: { country: any }) => {
       <div className="card-body ">
         <h2 className="card-title text-center">{country.name}</h2>
         <p> {country.capital ? `Capital: ${country.capital}` : null}</p>
-        <div className="card-actions justify-end">
+        <div className="card-actions">
           <button
             onClick={handleOnClick}
             className="btn bg-teal-600 px-2 text-center"

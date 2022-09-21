@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <VisitedCounties />
       </div>
       <LazyCountries />
-      <Countries />
+      {/* <Countries /> */}
     </div>
   );
 };
