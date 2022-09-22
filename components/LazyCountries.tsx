@@ -18,10 +18,14 @@ const GET_COUNTRIES = gql`
 `;
 
 const LazyCountries = () => {
-  const [getCountries, { loading, data }] = useLazyQuery(GET_COUNTRIES);
+  const [getCountries, { loading, data, error }] = useLazyQuery(GET_COUNTRIES);
 
   if (loading) {
     return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>{error.message}</div>;
   }
 
   return !data ? (

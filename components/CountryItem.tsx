@@ -3,7 +3,6 @@ import { visitCountriesVar } from "../client/client";
 
 const CountryItem = ({ country }: { country: any }) => {
   const handleOnClick = () => {
-    console.log(country.visit);
     const visitCountries: any = visitCountriesVar();
     visitCountriesVar(
       country.visit
@@ -25,10 +24,10 @@ const CountryItem = ({ country }: { country: any }) => {
         <div className="card-actions">
           <button
             onClick={handleOnClick}
-            className="btn bg-teal-600 px-2 text-center"
+            className="btn bg-teal-600 px-2 text-center normal-case"
           >
             {country.visit ? "Remove From " : "Add To "}
-            itinerary
+            list
           </button>
         </div>
       </div>
