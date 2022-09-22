@@ -25,7 +25,7 @@ const LazyCountries = () => {
   }
 
   return !data ? (
-    <button className="btn bg-sky-500" onClick={() => getCountries()}>
+    <button className="btn bg-sky-500 mx-5" onClick={() => getCountries()}>
       Click to Load Countries
     </button>
   ) : (
