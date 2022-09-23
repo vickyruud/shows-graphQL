@@ -24,7 +24,7 @@ const CountryItem = ({ country }: { country: any }) => {
         <div className="card-actions">
           <button
             onClick={handleOnClick}
-            className="btn bg-teal-600 px-2 text-center normal-case"
+            className="btn bg-green-600 px-2 text-center normal-case"
           >
             {country.visit ? "Remove From " : "Add To "}
             list
