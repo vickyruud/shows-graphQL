@@ -1,24 +1,16 @@
-import { ApolloClient, InMemoryCache, makeVar } from "@apollo/client";
+import { ApolloClient, InMemoryCache, makeVar, HttpLink } from "@apollo/client";
 
 export const visitCountriesVar = makeVar([]);
 
-const cache = new InMemoryCache({
-  typePolicies: {
-    Country: {
-      fields: {
-        visit: {
-          read(_, { readField }) {
-            const countryCode = readField("code");
-            const visitCountries = visitCountriesVar();
-            return visitCountries.includes(countryCode);
-          },
-        },
-      },
-    },
-  },
-});
+const cache = new InMemoryCache({});
 
 export const client = new ApolloClient({
-  uri: "https://countries.trevorblades.com/",
+  // uri: "https://countries.trevorblades.com/",
+  // uri:"https://swapi-graphql.netlify.app/.netlify/functions/index",
+  uri: 'http://localhost:5000/',
+  fetchOptions: {
+    mode: 'no-cors'
+  }, 
   cache,
 });
+
