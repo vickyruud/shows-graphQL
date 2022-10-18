@@ -38,7 +38,7 @@ const Home: NextPage = () => {
 
   const arrayOfLinks = allLinks.map((link, i) => {
     return (
-      <div key={uuidv4()} className="border-4 mb-5 p-2">
+      <div key={uuidv4()} className="border-4 m-5 p-2">
         <div > URL: {link.url}</div>
         <div>Description: {link.description}</div>        
       </div>
