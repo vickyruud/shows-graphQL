@@ -7,7 +7,7 @@ import {useQuery, useMutation} from '@apollo/client'
 
 const Home: NextPage = () => {
 
-  const [link, setLink] = useState('')
+  const [url, setLink] = useState('')
   const [description, setDescription] = useState('')
   const [allLinks, setAllLinks] = useState<any[]>([]);
 
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
     updateMutation({
       refetchQueries: ["AllLinks"],
       variables: {
-        url: link,
+        url: url,
         description: description
       }
     });
@@ -54,8 +54,8 @@ const Home: NextPage = () => {
       </div>     
       {arrayOfLinks}
       <form onSubmit={handleSubmit}className="flex gap-6">
-        <label>Link Name</label>
-        <input onChange={(e) => setLink(e.target.value)}  value={link} type="text" name="link" className="border-4" />
+        <label>Url</label>
+        <input onChange={(e) => setLink(e.target.value)}  value={url} type="text" name="link" className="border-4" />
         <label>Description</label>
         <input onChange={(e) => setDescription(e.target.value)} value={description} type="text" name="description" className="border-4" />
         <button type="submit">Submit</button>
