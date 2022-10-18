@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   const [editDescription, setEditDescription] = useState('')
   const [editID, setEditId] = useState('')
 
-  const [selectedUrl, setSelectedUrl] = useState<any[]>({})
+  const [selectedUrl, setSelectedUrl] = useState<any>({})
   const [edit, setEdit] = useState(false);
 
 
