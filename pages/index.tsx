@@ -53,7 +53,7 @@ const Home: NextPage = () => {
         <h1 className="text-2xl font-semibold ">Practice GQL</h1>      
       </div>     
       {arrayOfLinks}
-      <form onSubmit={handleSubmit}className="flex gap-6">
+      <form onSubmit={handleSubmit}className="flex gap-6 m-5">
         <label>Url</label>
         <input onChange={(e) => setLink(e.target.value)}  value={url} type="text" name="link" className="border-4" />
         <label>Description</label>
