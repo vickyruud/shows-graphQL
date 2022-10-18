@@ -19,12 +19,14 @@ const Home: NextPage = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault();    
     updateMutation({
-      refetchQueries:["AllLinks"],
+      refetchQueries: ["AllLinks"],
       variables: {
-      url: link,
-      description: description
+        url: link,
+        description: description
       }
-    })
+    });
+    setLink('');
+    setDescription('')
   }
   
   useEffect(() => {
@@ -53,9 +55,9 @@ const Home: NextPage = () => {
       {arrayOfLinks}
       <form onSubmit={handleSubmit}className="flex gap-6">
         <label>Link Name</label>
-        <input onChange={(e) => setLink(e.target.value)} type="text" name="link" className="border-4" />
+        <input onChange={(e) => setLink(e.target.value)}  value={link} type="text" name="link" className="border-4" />
         <label>Description</label>
-        <input onChange={(e) => setDescription(e.target.value)} type="text" name="description" className="border-4" />
+        <input onChange={(e) => setDescription(e.target.value)} value={description} type="text" name="description" className="border-4" />
         <button type="submit">Submit</button>
         
       </form>
